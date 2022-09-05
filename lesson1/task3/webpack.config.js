@@ -24,6 +24,7 @@ const path = require('path');
 const HtmlWebpackPlugins = require("html-webpack-plugin");
 
 module.exports = {
+  mode: "development",
   output: {
     path: path.resolve(__dirname, 'review_build'),
   },
