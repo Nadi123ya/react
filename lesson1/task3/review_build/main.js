@@ -40,16 +40,6 @@ eval("/**\n * @license React\n * react-dom.development.js\n *\n * Copyright (c) 
 
 /***/ }),
 
-/***/ "./node_modules/react-dom/client.js":
-/*!******************************************!*\
-  !*** ./node_modules/react-dom/client.js ***!
-  \******************************************/
-/***/ ((__unused_webpack_module, exports, __webpack_require__) => {
-
-eval("\n\nvar m = __webpack_require__(/*! react-dom */ \"./node_modules/react-dom/index.js\");\n\nif (false) {} else {\n  var i = m.__SECRET_INTERNALS_DO_NOT_USE_OR_YOU_WILL_BE_FIRED;\n\n  exports.createRoot = function (c, o) {\n    i.usingClientEntryPoint = true;\n\n    try {\n      return m.createRoot(c, o);\n    } finally {\n      i.usingClientEntryPoint = false;\n    }\n  };\n\n  exports.hydrateRoot = function (c, h, o) {\n    i.usingClientEntryPoint = true;\n\n    try {\n      return m.hydrateRoot(c, h, o);\n    } finally {\n      i.usingClientEntryPoint = false;\n    }\n  };\n}\n\n//# sourceURL=webpack://task3/./node_modules/react-dom/client.js?");
-
-/***/ }),
-
 /***/ "./node_modules/react-dom/index.js":
 /*!*****************************************!*\
   !*** ./node_modules/react-dom/index.js ***!
@@ -106,7 +96,7 @@ eval("\n\nif (false) {} else {\n  module.exports = __webpack_require__(/*! ./cjs
   \**********************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ \"./node_modules/react/index.js\");\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);\n/* harmony import */ var react_dom_client__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-dom/client */ \"./node_modules/react-dom/client.js\");\n/* harmony import */ var _styles_css__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./styles.css */ \"./src/styles.css\");\n // import ReactDom from \"react-dom\";\n\n\n\nconst rootElement = document.querySelector('#root'); // const renderGreeting = elem => {\n//   const containerElem = document.createElement('div');\n//   containerElem.classList.add('greeting');\n//   const titleElem = document.createElement('h1');\n//   titleElem.classList.add('greeting__title');\n//   titleElem.textContent = 'Hello, world!';\n//   const textElem = document.createElement('p');\n//   textElem.classList.add('greeting__text');\n//   textElem.textContent = 'I am learning React';\n//   containerElem.append(titleElem, textElem);\n//   elem.append(containerElem);\n// };\n// renderGreeting(rootElement);\n\nconst element = /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(\"div\", {\n  className: \"greeting\"\n}, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(\"div\", {\n  className: \"greeting__title\"\n}, \"Hello, world!\"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(\"div\", {\n  className: \"greeting__text\"\n}, \"I`m learning React\"));\nconst root = (0,react_dom_client__WEBPACK_IMPORTED_MODULE_1__.createRoot)(rootElement);\nroot.render(element); // ReactDom.render(element, rootElement);\n\n//# sourceURL=webpack://task3/./src/index.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ \"./node_modules/react/index.js\");\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);\n/* harmony import */ var _styles_css__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./styles.css */ \"./src/styles.css\");\n/* harmony import */ var react_dom__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react-dom */ \"./node_modules/react-dom/index.js\");\n // import { createRoot } from 'react-dom/client';\n\n\n\nconst rootElement = document.querySelector('#root');\nconst element = /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(\"div\", {\n  className: \"greeting\"\n}, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(\"div\", {\n  className: \"greeting__title\"\n}, \"Hello, world!\"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(\"div\", {\n  className: \"greeting__text\"\n}, \"I`m learning React\")); // const root = createRoot(rootElement);\n// root.render(element);\n\nreact_dom__WEBPACK_IMPORTED_MODULE_2__.render(element, rootElement);\n\n//# sourceURL=webpack://task3/./src/index.js?");
 
 /***/ }),
 

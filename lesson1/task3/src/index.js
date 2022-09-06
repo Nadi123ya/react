@@ -1,7 +1,7 @@
 import React from "react";
-import { createRoot } from 'react-dom/client';
+// import { createRoot } from 'react-dom/client';
 import "./styles.css";
-// import ReactDom from "react-dom";
+import ReactDom from "react-dom";
 
 const rootElement = document.querySelector('#root');
 
@@ -14,6 +14,6 @@ const element = (
 
 );
 
-const root = createRoot(rootElement);
-root.render(element);
-// ReactDom.render(element, rootElement);
+// const root = createRoot(rootElement);
+// root.render(element);
+ReactDom.render(element, rootElement);
