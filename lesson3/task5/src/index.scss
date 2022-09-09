@@ -1,0 +1,26 @@
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+#root {
+  height: 100vh;
+  display: flex;
+}
+
+.profile {
+  margin: auto;
+  padding: 8px;
+  border: 3px solid #c52b2b;
+  display: flex;
+  flex-direction: column;
+  &__name {
+    background-color: #10f5f5;
+    padding: 8px;
+    text-align: center;
+  }
+  &__birth{
+    background-color: #eeee1a;
+    padding: 8px;
+    text-align: center;
+  }
+}
