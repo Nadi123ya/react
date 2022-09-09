@@ -5,9 +5,9 @@ const getAge = (date) =>
 
 function Greeting(props) {
   return (
-    <div className="greeting">{`My  is ${props.firstName} ${
-      props.lastName
-    }. I'm ${getAge(props.birthDate)} years old`}</div>
+    <div className="greeting">
+      My name is {props.firstName} {props.lastName}. I'm {getAge(props.birthDate)} years old
+    </div>
   );
 }
 
