@@ -1,11 +1,13 @@
+
 import React from "react";
 
-const GoodButton = () => (
-    <button 
-    className="fancy-button"
-    onClick={()=> alert("Good job!")}
-    >
-        Click me!</button>
-);
+const Login = (props) => {
+  return <button 
+  className='btn login' 
+  onClick={props.onLogin}
+  >
+  Login
+  </button>
+}
 
-export default GoodButton;
+export default Login;
