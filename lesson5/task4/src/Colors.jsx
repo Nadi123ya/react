@@ -5,7 +5,7 @@ const GREEN = "#0f0";
 const BLUE = "#00f";
 
 export class Colors extends Component {
-  setBodyColor = (color) => {
+  setBodyColor = (color,e) => {
     document.body.style.backgroundColor = color;
   };
   render() {
@@ -15,7 +15,7 @@ export class Colors extends Component {
           style={{
             backgroundColor: RED,
           }}
-          onClick={() => this.setBodyColor(RED)}
+          onClick={this.setBodyColor.bind(this, RED)}
           className="colors__button"
         />
         <button
