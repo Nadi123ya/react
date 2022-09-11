@@ -5,7 +5,7 @@ export class Toggler extends React.Component {
     super(props);
 
     this.state = {
-      counter: false,
+      counter: 0,
       toggler: "Off",
     };
   }
