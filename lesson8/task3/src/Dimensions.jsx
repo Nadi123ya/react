@@ -9,7 +9,7 @@ class Dimensions extends React.Component {
   componentDidMount() {
     window.addEventListener("resize", this.onResize);
     const { innerWidth, innerHeight } = window;
-    this.setDimensions(innerWidth, innerHeight);
+    this.setDimension(innerWidth, innerHeight);
   }
 
   componentWillUnMount() {
@@ -18,10 +18,10 @@ class Dimensions extends React.Component {
 
   onResize = (e) => {
     const { innerWidth, innerHeight } = e.target;
-    this.setDimensions(innerWidth, innerHeight);
+    this.setDimension(innerWidth, innerHeight);
   };
 
-  setDimensions = (width, height) => {
+  setDimension = (width, height) => {
     this.setState({
       width,
       height,
