@@ -8,6 +8,7 @@ class User extends React.Component {
   componentDidMount() {
     this.fetchUser(this.props.userId);
   }
+
   fetchUser = (userId) => {
     fetch(`https://api.github.com/users/${userId}"`)
       .then((response) => response.json())
@@ -17,12 +18,14 @@ class User extends React.Component {
         });
       });
   };
+
   render() {
     const { user } = this.state;
-    if (!this.state.user) {
+    if (!user) {
       return null;
     }
     const { avatar_url, location, name } = user;
+    
     return (
       <div className="user">
         <img alt="User Avatar" src={avatar_url} className="user__avatar" />
