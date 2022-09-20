@@ -12,7 +12,7 @@ class Dimensions extends React.Component {
     this.setDimension(innerWidth, innerHeight);
   }
 
-  componentWillUnMount() {
+  componentWillUnmount() {
     window.removeEventListener("resize", this.onResize);
   }
 
