@@ -24,8 +24,9 @@ class User extends React.Component {
     if (!user) {
       return null;
     }
-    const { avatar_url, location, name } = user;
-    
+
+    const { avatar_url, name, location } = user;
+
     return (
       <div className="user">
         <img alt="User Avatar" src={avatar_url} className="user__avatar" />
