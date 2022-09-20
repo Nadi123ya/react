@@ -1,6 +1,6 @@
-import React from "react";
+import React, { Component } from "react";
 
-class User extends React.Component {
+class User extends Component {
   state = {
     user: null,
   };
@@ -10,8 +10,8 @@ class User extends React.Component {
   }
 
   fetchUser = (userId) => {
-    fetch(`https://api.github.com/users/${userId}"`)
-      .then((response) => response.json())
+    fetch(`https://api.github.com/users/${userId}`)
+      .then((res) => res.json())
       .then((data) => {
         this.setState({
           user: data,
