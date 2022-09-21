@@ -5,6 +5,7 @@ class UserForm extends React.Component {
   constructor(props) {
     super(props);
     console.log(props.onSubmit)
+    //App should pass method CreateUser in prop onSubmit of the component UserForm
   }
 
   state = {
