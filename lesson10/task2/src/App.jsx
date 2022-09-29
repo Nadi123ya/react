@@ -5,8 +5,8 @@ import Profile from "./Profile";
 class App extends React.Component {
   state = {
     userData: {
-      firstName: "Tom",
-      lastName: "Ford",
+      firstName: "John",
+      lastName: "Doe",
     },
   };
 
@@ -24,7 +24,7 @@ class App extends React.Component {
     const { userData } = this.state;
     return (
       <div className="page">
-        <h1 className="title">{`Hello, ${userData.firstName} ${userData.lastName} `}</h1>
+        <h1 className="title">{`Hello, ${userData.firstName} ${userData.lastName}`}</h1>
         <main className="content">
           <ShoppingCart userData={userData.firstName} />
           <Profile userData={userData} handleChange={this.handleChange} />
