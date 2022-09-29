@@ -7,15 +7,15 @@ const UserForm = ({userData, handleChange}) => {
         type="text"
         name="firstName"
         className="user-form__input"
-        value={userData.firstName}
         onChange={handleChange}
+        value={userData.firstName}
       />
       <input
         type="text"
         name="lastName"
         className="user-form__input"
-        value={userData.lastName}
         onChange={handleChange}
+        value={userData.lastName}
       />
     </form>
   );
