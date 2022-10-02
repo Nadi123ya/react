@@ -1,15 +1,7 @@
-import React, {PureComponent} from "react";
+import React, { PureComponent } from "react";
+import PropTypes from "prop-types";
 
 class Numbers extends PureComponent {
-  // shouldComponentUpdate(nextProps) {
-  //   if (
-  //     this.props.number === nextProps.number &&
-  //     this.props.title === nextProps.title
-  //   ) {
-  //     return false;
-  //   }
-  //   return true;
-  // }
   render() {
     return (
       <div className="number">
@@ -19,5 +11,14 @@ class Numbers extends PureComponent {
     );
   }
 }
+
+Numbers.PropTypes = {
+  title: PropTypes.string,
+  number: PropTypes.number.isRequired,
+};
+
+Numbers.defaultProps = {
+  title: "Some number",
+};
 
 export default Numbers;
