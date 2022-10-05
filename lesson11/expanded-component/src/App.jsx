@@ -1,6 +1,5 @@
 import React from "react";
 import Expand from "./Expand";
-// import PropTypes from "prop-types";
 
 class App extends React.Component {
 

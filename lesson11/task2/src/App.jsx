@@ -36,7 +36,7 @@ class App extends React.Component {
     );
   }
 }
-Dialog.PropTypes = {
+Dialog.propTypes = {
   isOpen: PropTypes.bool,
   children: PropTypes.element.isRequired,
   title: PropTypes.string,

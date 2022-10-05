@@ -1,8 +1,9 @@
 import React from "react";
+import PropTypes from "prop-types";
 
 class Expand extends React.Component {
     state = {
-      isOpen: true,
+      isOpen: false,
     };
 
   handleExpand = () => {
@@ -14,7 +15,7 @@ class Expand extends React.Component {
   render() {
     let arrow;
     let children;
-    if (this.state.isOpen) {
+    if (this.state.isOpen === false) {
       children = null;
       arrow = <i className="fa-solid fa-arrow-down"></i>
     } else {
@@ -37,4 +38,15 @@ class Expand extends React.Component {
     );
   }
 }
+Expand.propTypes = {
+isOpen: PropTypes.bool,
+children: PropTypes.element.isRequired,
+title: PropTypes.string,
+handleExpand: PropTypes.func,
+};
+
+Expand.defaulProps = {
+isOpen: false,
+title: "",
+};
 export default Expand;
