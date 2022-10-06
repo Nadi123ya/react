@@ -37,7 +37,7 @@ class CreateTaskInput extends React.Component {
 
 export default CreateTaskInput;
 
-//1. Take a text from the input
+//1. Take a text from the input//
 // in order to do it we need to make an input a controlled component,
 // so we need to add state
 //2. Create a task with this text
