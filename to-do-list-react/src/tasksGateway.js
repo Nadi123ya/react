@@ -1,5 +1,5 @@
 const baseUrl =
-  "https://crudcrud.com/api/676c46d9ee9d43ebb715ff9e24adb6c4/tasks";
+  "https://crudcrud.com/api/729662a292ce47e4bea5dab0dc82ecd7/tasks";
 
 // const baseUrl = "https://62f9bd43ffd7197707df7c8f.mockapi.io/tasks";
 

@@ -1,6 +1,7 @@
 import React from "react";
+import PropTypes from "prop-types";
 
-class CreateTaskInput extends React.Component {
+class CreateTaskInput extends React.PureComponent {
   state = {
     value: "",
   };
@@ -34,6 +35,13 @@ class CreateTaskInput extends React.Component {
     );
   }
 }
+CreateTaskInput.propTypes = {
+  value: PropTypes.string,
+};
+
+CreateTaskInput.defaultProps = {
+  value: "plant a tree",
+};
 
 export default CreateTaskInput;
 

@@ -8,6 +8,8 @@ import {
   deleteTask,
 } from "./tasksGateway";
 
+import propTypes from "prop-types";
+
 class TasksList extends React.Component {
   state = {
     tasks: [],
@@ -23,7 +25,7 @@ class TasksList extends React.Component {
         tasks: tasksList,
       })
     );
-    };
+  };
 
   onCreate = (text) => {
     const newTask = {
@@ -34,34 +36,33 @@ class TasksList extends React.Component {
     createTask(newTask).then(() => this.fetchTasks());
   };
 
-    handleTaskStatusChange = (id) => {
-      const { done, text } = this.state.tasks.find((task) => task.id === id);
-      const updatedTask = {
-        text,
-        done: !done,
-      };
-      updateTask(id, updatedTask).then(() => this.fetchTasks());
+  handleTaskStatusChange = (id) => {
+    const { done, text } = this.state.tasks.find((task) => task.id === id);
+    const updatedTask = {
+      text,
+      done: !done,
     };
+    updateTask(id, updatedTask).then(() => this.fetchTasks());
+  };
 
-    //     return {
-    //       ...task,
-    //       done: !task.done,
-    //     };
-    //   }
-    //   return task;
-    // });
-    // this.setState({
-    //   tasks: updatedTasks,
-    // });
+  //     return {
+  //       ...task,
+  //       done: !task.done,
+  //     };
+  //   }
+  //   return task;
+  // });
+  // this.setState({
+  //   tasks: updatedTasks,
+  // });
 
-    // 1. find a task in the list
-    // 2. toggle done value
-    // 3. save updated list
+  // 1. find a task in the list
+  // 2. toggle done value
+  // 3. save updated list
 
-    handleTaskDelete = (id) => {
-      deleteTask(id).then(() => this.fetchTasks());
-    };
-  
+  handleTaskDelete = (id) => {
+    deleteTask(id).then(() => this.fetchTasks());
+  };
 
   //1.filter tasks
   //2.Update state
@@ -89,5 +90,13 @@ class TasksList extends React.Component {
     );
   }
 }
+
+Task.propTypes = {
+  done: propTypes.bool,
+  id: propTypes.string,
+  onChange: propTypes.func,
+  onDelete: propTypes.func,
+  text: propTypes.string,
+};
 
 export default TasksList;
