@@ -23,7 +23,7 @@ class TasksList extends React.Component {
         tasks: tasksList,
       })
     );
-  };
+    };
 
   onCreate = (text) => {
     const newTask = {
@@ -32,6 +32,7 @@ class TasksList extends React.Component {
     };
 
     createTask(newTask).then(() => this.fetchTasks());
+  };
 
     handleTaskStatusChange = (id) => {
       const { done, text } = this.state.tasks.find((task) => task.id === id);
@@ -60,7 +61,7 @@ class TasksList extends React.Component {
     handleTaskDelete = (id) => {
       deleteTask(id).then(() => this.fetchTasks());
     };
-  };
+  
 
   //1.filter tasks
   //2.Update state
@@ -88,4 +89,5 @@ class TasksList extends React.Component {
     );
   }
 }
+
 export default TasksList;
