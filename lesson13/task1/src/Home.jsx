@@ -1,18 +1,13 @@
-import React, { PureComponent } from "react";
+import React from "react";
+import {Link} from "react-router-dom"
 
-class Home extends PureComponent {
-  render() {
-    return ();
-  }
+function Home() {
+  return (
+    <div className="page__content">
+      <h1>🏠</h1>
+      <Link to="/products">To Products</Link>
+    </div>
+  );
 }
-
-Numbers.PropTypes = {
-  title: PropTypes.string,
-  number: PropTypes.number.isRequired,
-};
-
-Numbers.defaultProps = {
-  title: "Some number",
-};
 
 export default Home;
