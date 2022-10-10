@@ -1,7 +1,7 @@
 import React from "react";
 import Home from "./Home";
 import Products from "./Products";
-import { BrowserRouter, Route, Switch, Link, useParams } from "react-router-dom";
+import { BrowserRouter, Route, Switch, Link} from "react-router-dom";
 
 const App = () => {
   return (
